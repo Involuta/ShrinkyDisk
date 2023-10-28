@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwhd8f1hhlh5v"]
+[gd_scene load_steps=5 format=3 uid="uid://cwhd8f1hhlh5v"]
 
 [ext_resource type="PackedScene" uid="uid://ct0460ejyxucf" path="res://Minivan/minivan.tscn" id="1_m8f4s"]
+[ext_resource type="PackedScene" uid="uid://dlwhvdx4342au" path="res://Truck/truck.tscn" id="2_crsth"]
 [ext_resource type="PackedScene" uid="uid://dlp85y16gr63d" path="res://Ground/ground.tscn" id="2_e6yxi"]
 [ext_resource type="PackedScene" uid="uid://bsflj5nft70uc" path="res://Void/void.tscn" id="3_x653f"]
 
@@ -10,6 +11,9 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 [node name="Minivan" parent="." instance=ExtResource("1_m8f4s")]
 z_index = 10
 motion_mode = 0
+
+[node name="Truck" parent="." instance=ExtResource("2_crsth")]
+position = Vector2(56, 1)
 
 [node name="Ground" parent="." instance=ExtResource("2_e6yxi")]
 
