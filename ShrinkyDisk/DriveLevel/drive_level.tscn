@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwhd8f1hhlh5v"]
+
+[ext_resource type="PackedScene" uid="uid://ct0460ejyxucf" path="res://Minivan/minivan.tscn" id="1_m8f4s"]
+[ext_resource type="PackedScene" uid="uid://dlp85y16gr63d" path="res://Ground/ground.tscn" id="2_e6yxi"]
+
+[node name="DriveLevel" type="Node2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="Minivan" parent="." instance=ExtResource("1_m8f4s")]
+motion_mode = 0
+
+[node name="Ground" parent="." instance=ExtResource("2_e6yxi")]

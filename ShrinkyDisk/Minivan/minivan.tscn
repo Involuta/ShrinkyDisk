@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct0460ejyxucf"]
+
+[ext_resource type="Texture2D" uid="uid://bulhenm3ggla0" path="res://Minivan/minivan_sprite.png" id="1_fpvlo"]
+[ext_resource type="Script" path="res://Minivan/PlayerMovement.gd" id="1_ida1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs3bo"]
+size = Vector2(31, 20)
+
+[node name="Minivan" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ida1u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -6.97574e-16)
+shape = SubResource("RectangleShape2D_cs3bo")
+
+[node name="MinivanSprite" type="Sprite2D" parent="."]
+position = Vector2(7, 2)
+rotation = -1.5708
+scale = Vector2(1.265, 1.265)
+texture = ExtResource("1_fpvlo")

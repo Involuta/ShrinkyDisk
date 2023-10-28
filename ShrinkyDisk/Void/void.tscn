@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsflj5nft70uc"]
+
+[ext_resource type="Script" path="res://Void/CreateVoid.gd" id="1_qwp7s"]
+
+[node name="Void" type="Node2D"]
+script = ExtResource("1_qwp7s")
