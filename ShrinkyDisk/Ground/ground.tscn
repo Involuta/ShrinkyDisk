@@ -43,7 +43,7 @@ position = Vector2(1003, 426)
 texture = ExtResource("1_2og4b")
 centered = false
 
-[node name="InitialSafezone" type="Area2D" parent="Sand"]
+[node name="InitialSafezoneVisual" type="Area2D" parent="Sand"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sand/InitialSafezone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sand/InitialSafezoneVisual"]
 shape = SubResource("CircleShape2D_n78jg")

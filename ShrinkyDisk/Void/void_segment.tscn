@@ -1,16 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu3jx7plmx0vu"]
+[gd_scene load_steps=4 format=3 uid="uid://bu3jx7plmx0vu"]
 
 [ext_resource type="Texture2D" uid="uid://d0id5glqd7na2" path="res://Void/Void.png" id="1_ifxod"]
+[ext_resource type="Script" path="res://Void/void_segment.gd" id="1_q2iwu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_krs6w"]
-size = Vector2(996, 37)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ripj"]
+size = Vector2(991, 51.9999)
 
-[node name="VoidSegment" type="RigidBody2D"]
+[node name="VoidSegment" type="CharacterBody2D"]
+position = Vector2(1, 0.5)
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_q2iwu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1815.5)
-shape = SubResource("RectangleShape2D_krs6w")
+[node name="VoidCollider" type="CollisionShape2D" parent="."]
+position = Vector2(-11.0001, 3.57628e-06)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_2ripj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1997)
+[node name="VoidSprite1" type="Sprite2D" parent="."]
+position = Vector2(162, 2.08165e-12)
+texture = ExtResource("1_ifxod")
+
+[node name="VoidSprite2" type="Sprite2D" parent="."]
+position = Vector2(733, -1.5)
 texture = ExtResource("1_ifxod")
