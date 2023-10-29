@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Void/void_segment.gd" id="1_q2iwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ripj"]
-size = Vector2(991, 51.9999)
+size = Vector2(991, 62)
 
 [node name="VoidSegment" type="CharacterBody2D"]
 position = Vector2(1, 0.5)
@@ -14,7 +14,7 @@ motion_mode = 1
 script = ExtResource("1_q2iwu")
 
 [node name="VoidCollider" type="CollisionShape2D" parent="."]
-position = Vector2(-11.0001, 3.57628e-06)
+position = Vector2(-104, 0.000340223)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_2ripj")
 

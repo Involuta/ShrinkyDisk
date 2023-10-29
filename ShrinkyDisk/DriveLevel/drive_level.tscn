@@ -13,6 +13,7 @@ z_index = 10
 motion_mode = 0
 
 [node name="Truck" parent="." instance=ExtResource("2_crsth")]
+z_index = 10
 position = Vector2(56, 1)
 
 [node name="Ground" parent="." instance=ExtResource("2_e6yxi")]

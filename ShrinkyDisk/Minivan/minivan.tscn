@@ -171,12 +171,13 @@ _data = {
 }
 
 [node name="Minivan" type="CharacterBody2D"]
-collision_mask = 3
+collision_layer = 0
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_ida1u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(0.7, 0.7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

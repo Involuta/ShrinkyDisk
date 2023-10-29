@@ -14,6 +14,8 @@ var speed = 0
 
 func _ready():
 	anim.play("Drive")
+	# Void segments spawn in the center, then teleport to perimeter
+	# Invincibility prevents player from immediately dying when the segments first spawn in
 	await get_tree().create_timer(1).timeout
 	invincible = false
 

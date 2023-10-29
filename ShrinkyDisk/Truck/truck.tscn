@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlwhvdx4342au"]
+[gd_scene load_steps=8 format=3 uid="uid://dlwhvdx4342au"]
 
 [ext_resource type="Texture2D" uid="uid://8c1ceqf1td0r" path="res://Truck/Truck.png" id="1_87vgm"]
+[ext_resource type="Script" path="res://Truck/truck.gd" id="1_c8s1x"]
 
 [sub_resource type="Animation" id="Animation_84w5l"]
 resource_name = "Drive"
@@ -46,10 +47,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wq8qy"]
-size = Vector2(42, 21)
+size = Vector2(40, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo416"]
+size = Vector2(44, 25)
 
 [node name="Truck" type="CharacterBody2D"]
-collision_mask = 3
+collision_mask = 0
+script = ExtResource("1_c8s1x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
@@ -63,5 +68,15 @@ sprite_frames = SubResource("SpriteFrames_s5ngb")
 animation = &"Drive"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -0.5)
+position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_wq8qy")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_vo416")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
