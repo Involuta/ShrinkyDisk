@@ -15,8 +15,6 @@ func _ready():
 		add_child(seg)
 		seg.name = "VoidSegment" + str(i)
 		seg.global_position = global.initial_earth_radius * Vector2.from_angle(current_seg_angle)
-		print("Angle at center: " + str(current_seg_angle))
-		print("Angle to pt: " + str(seg.global_position.angle_to_point(Vector2.ZERO)))
 		seg.rotation = current_seg_angle
 		seg.velocity = global.initial_earth_radius / global.shrink_time_secs * -Vector2.from_angle(current_seg_angle)
 		current_seg_angle += seg_angle_change

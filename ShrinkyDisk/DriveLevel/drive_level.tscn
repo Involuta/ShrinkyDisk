@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwhd8f1hhlh5v"]
+[gd_scene load_steps=6 format=3 uid="uid://cwhd8f1hhlh5v"]
 
 [ext_resource type="PackedScene" uid="uid://ct0460ejyxucf" path="res://Minivan/minivan.tscn" id="1_m8f4s"]
 [ext_resource type="PackedScene" uid="uid://dlwhvdx4342au" path="res://Truck/truck.tscn" id="2_crsth"]
 [ext_resource type="PackedScene" uid="uid://dlp85y16gr63d" path="res://Ground/ground.tscn" id="2_e6yxi"]
+[ext_resource type="PackedScene" uid="uid://cawbllhumbm7a" path="res://Van/van.tscn" id="3_b61i4"]
 [ext_resource type="PackedScene" uid="uid://bsflj5nft70uc" path="res://Void/void.tscn" id="3_x653f"]
 
 [node name="DriveLevel" type="Node2D"]
@@ -15,6 +16,10 @@ motion_mode = 0
 [node name="Truck" parent="." instance=ExtResource("2_crsth")]
 z_index = 10
 position = Vector2(56, 1)
+
+[node name="Van" parent="." instance=ExtResource("3_b61i4")]
+z_index = 10
+position = Vector2(-51, -1)
 
 [node name="Ground" parent="." instance=ExtResource("2_e6yxi")]
 

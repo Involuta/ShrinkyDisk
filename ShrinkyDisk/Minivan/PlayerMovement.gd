@@ -45,7 +45,13 @@ func _on_hurtbox_body_entered(body):
 		print("You win!")
 		await get_tree().create_timer(1).timeout
 		die()
-	if "VoidSegment" in body.name and !invincible:
+	elif "Van" in body.name:
+		rotation = 0
+		set_physics_process(false)
+		anim.play("Boom")
+		await get_tree().create_timer(1).timeout
+		die()
+	elif "VoidSegment" in body.name and !invincible:
 		set_physics_process(false)
 		anim.play("Fall")
 		await get_tree().create_timer(1).timeout
