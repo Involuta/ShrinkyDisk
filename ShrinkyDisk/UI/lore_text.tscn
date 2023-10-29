@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnoapk1amctpy"]
+
+[ext_resource type="Texture2D" uid="uid://sw74av7xrq4c" path="res://UI/LoreText.png" id="1_1aiup"]
+[ext_resource type="Script" path="res://UI/lore_text.gd" id="1_yeugr"]
+[ext_resource type="Texture2D" uid="uid://bs8toenkhswhy" path="res://UI/Back.png" id="2_jfshj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qffwb"]
+texture = ExtResource("1_1aiup")
+
+[node name="LoreText" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yeugr")
+
+[node name="BGMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="BGMarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qffwb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -182.0
+offset_right = 534.0
+grow_vertical = 0
+
+[node name="BackButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_jfshj")
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

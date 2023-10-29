@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwhd8f1hhlh5v"]
+[gd_scene load_steps=7 format=3 uid="uid://cwhd8f1hhlh5v"]
 
 [ext_resource type="PackedScene" uid="uid://ct0460ejyxucf" path="res://Minivan/minivan.tscn" id="1_m8f4s"]
 [ext_resource type="PackedScene" uid="uid://dlwhvdx4342au" path="res://Truck/truck.tscn" id="2_crsth"]
 [ext_resource type="PackedScene" uid="uid://dlp85y16gr63d" path="res://Ground/ground.tscn" id="2_e6yxi"]
 [ext_resource type="PackedScene" uid="uid://cawbllhumbm7a" path="res://Van/van.tscn" id="3_b61i4"]
 [ext_resource type="PackedScene" uid="uid://bsflj5nft70uc" path="res://Void/void.tscn" id="3_x653f"]
+[ext_resource type="PackedScene" uid="uid://v55df516gjo0" path="res://Minimap/minimap.tscn" id="6_b4g6m"]
 
 [node name="DriveLevel" type="Node2D"]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -12,16 +13,27 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 [node name="Minivan" parent="." instance=ExtResource("1_m8f4s")]
 z_index = 10
 motion_mode = 0
+metadata/_edit_lock_ = true
 
 [node name="Truck" parent="." instance=ExtResource("2_crsth")]
 z_index = 10
 position = Vector2(56, 1)
+metadata/_edit_lock_ = true
 
 [node name="Van" parent="." instance=ExtResource("3_b61i4")]
 z_index = 10
 position = Vector2(-51, -1)
+metadata/_edit_lock_ = true
 
 [node name="Ground" parent="." instance=ExtResource("2_e6yxi")]
+metadata/_edit_lock_ = true
 
 [node name="Void" parent="." instance=ExtResource("3_x653f")]
 z_index = 1
+metadata/_edit_lock_ = true
+
+[node name="Map" type="CanvasLayer" parent="."]
+offset = Vector2(480, 100)
+transform = Transform2D(1, 0, 0, 1, 480, 100)
+
+[node name="Minimap" parent="Map" instance=ExtResource("6_b4g6m")]

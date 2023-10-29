@@ -19,7 +19,7 @@ func _ready():
 
 const acc = 2
 const turn_speed = .05
-const max_speed = 300
+const max_speed = 400
 const edge_change_dir_cooldown = .5
 
 var speed = 0
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	rotation = move_toward(rotation, drive_dir, turn_speed)
 	velocity = speed * transform.x
 	
-	if drive_state == VAN_STATE.CHASE:
+	if (drive_state == VAN_STATE.CHASE) or Input.is_action_just_pressed("OpenMap"):
 		drive_dir = (minivan.global_position - global_position).angle()
 	
 	move_and_slide()
