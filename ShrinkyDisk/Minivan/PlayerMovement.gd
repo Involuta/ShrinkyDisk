@@ -36,6 +36,10 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+func win():
+	get_tree().change_scene_to_file("res://UI/win_screen.tscn")
+
+
 func die():
 	get_tree().change_scene_to_file("res://UI/main_menu.tscn")
 
@@ -44,7 +48,7 @@ func _on_hurtbox_body_entered(body):
 	if "Truck" in body.name:
 		print("You win!")
 		await get_tree().create_timer(1).timeout
-		die()
+		win()
 	elif "Van" in body.name:
 		rotation = 0
 		set_physics_process(false)

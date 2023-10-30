@@ -248,7 +248,7 @@ motion_mode = 1
 script = ExtResource("1_ida1u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(2.5, 2.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

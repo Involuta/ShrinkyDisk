@@ -18,7 +18,7 @@ func _ready():
 
 const acc = 2
 const turn_speed = .1
-const max_speed = 525
+const max_speed = 600
 const change_dir_cooldown = .5
 
 var speed = 0
